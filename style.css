@@ -91,6 +91,10 @@ body.halloween .author-avatar-color {
     background-color: var(--green);
 }
 
+body.halloween input {
+    color: var(--green);
+}
+
 @keyframes scrollBanner {
     0% {
         transform: translateX(0);
