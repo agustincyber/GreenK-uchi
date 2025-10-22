@@ -1,0 +1,197 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scrollBanner {
+    animation: scrollBanner 20s linear infinite;
+}
+
+/* --- MODO HALLOWEEN --- */
+body.halloween {
+    --green: #ff8c00;
+    --dark: #2d0c3d;
+    --muted: #b8b8b8;
+    background-color: #FFF;
+    color: #fff;
+}
+
+body.halloween .badge {
+    background-color: var(--green);
+}
+
+body.halloween .badge span {
+    color: #FFF;
+}
+
+body.halloween header {
+    background-color: var(--green);
+}
+
+body.halloween h2 {
+    color: var(--green);
+}
+
+body.halloween .btn-primary {
+    background-color: var(--dark);
+}
+
+body.halloween .btn-outline {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+body.halloween .btn-outline:hover {
+    background-color: var(--green);
+    color: var(--dark);
+}
+
+body.halloween .promo-banner {
+    background: linear-gradient(90deg, #2d0c3d, #5a189a);
+}
+
+body.halloween .product-card {
+    background-color: #3c1642;
+}
+
+body.halloween .section-ofertas {
+    background-color: #2d0c3d;
+}
+
+body.halloween .testimonials-section {
+    background-color: #2d0c3d;
+}
+
+body.halloween .testimonial-card {
+    background-color: #3c1642;
+}
+
+body.halloween .main-footer {
+    background-color: #2d0c3d;
+}
+
+body.halloween .price-color {
+    color: var(--green);
+}
+
+body.halloween .product-tag-color {
+    background-color: var(--green);
+}
+
+body.halloween .author-avatar-color {
+    background-color: var(--green);
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.promo-content {
+    display: flex;
+    will-change: transform;
+}
+
+.animate-scrollBanner {
+    animation: scrollBanner 30s linear infinite;
+}
+
+.btn {
+    @apply inline-flex items-center gap-2 py-2.5 px-6 rounded-lg font-bold transition-all duration-300 ease-in-out cursor-pointer hover:-translate-y-0.5;
+}
+
+.btn-sm {
+    @apply py-2 px-4 text-sm rounded-md;
+}
+
+.product-card {
+    @apply relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1;
+}
+
+.product-card img {
+    @apply w-full h-44 object-cover;
+}
+
+.price-row {
+    @apply flex justify-between items-center;
+}
+
+.price {
+    @apply font-extrabold text-xl transition-colors duration-500;
+}
+
+.testimonial-card {
+    @apply bg-white p-6 rounded-xl shadow-lg transition-colors duration-500;
+}
+
+.testimonial-text {
+    @apply italic mb-4 text-[#6b6b6b];
+}
+
+.testimonial-author {
+    @apply flex items-center gap-3;
+}
+
+.author-avatar {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-bold transition-colors duration-500;
+}
+
+.form-label {
+    @apply block mb-2 font-semibold text-gray-800;
+}
+
+.form-input {
+    @apply w-full p-3 rounded-lg border-2 border-gray-200 bg-gray-50 focus:outline-none focus:border-[#00a86b] focus:bg-white focus:ring-2 focus:ring-[#00a86b]/20 transition;
+}
+
+.product-item {
+    @apply flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-gray-200 rounded-lg gap-4;
+}
+
+.product-info {
+    @apply flex-1;
+}
+
+.product-name {
+    @apply font-semibold;
+}
+
+.product-price {
+    @apply text-sm text-[#00a86b] font-bold;
+}
+
+.product-quantity {
+    @apply flex items-center gap-2 self-end sm:self-center;
+}
+
+.quantity-btn {
+    @apply w-8 h-8 rounded-full border border-gray-300 bg-white flex items-center justify-center cursor-pointer font-bold hover:bg-gray-100;
+}
+
+.quantity-input {
+    @apply w-12 text-center border-t border-b border-gray-300 h-8;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
