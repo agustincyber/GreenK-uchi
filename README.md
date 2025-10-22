@@ -25,12 +25,20 @@
             padding: 0;
         }
         
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
         body {
             font-family: 'Montserrat', sans-serif;
             background: var(--bg);
             color: var(--dark);
             line-height: 1.6;
             transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         /* Modo Halloween */
@@ -114,6 +122,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            width: 100%;
         }
         
         .brand {
@@ -152,6 +161,8 @@
             padding: 3rem 4%;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
+            flex: 1;
         }
         
         .hero .copy h2 {
@@ -173,6 +184,7 @@
         .hero p {
             color: var(--muted);
             line-height: 1.5;
+            margin-bottom: 1.5rem;
         }
         
         .cta {
@@ -235,8 +247,9 @@
             padding: 1rem;
             overflow: hidden;
             position: relative;
-            margin: 2rem 4%;
-            border-radius: 8px;
+            margin: 2rem 0;
+            border-radius: 0;
+            width: 100%;
         }
         
         .promo-content {
@@ -275,6 +288,7 @@
             text-align: center;
             margin: 3rem 0 1.5rem;
             font-size: 2rem;
+            width: 100%;
         }
         
         .product-grid {
@@ -284,6 +298,7 @@
             padding: 2rem 4%;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
         
         .product {
@@ -349,6 +364,7 @@
             padding: 3rem 4%;
             background: #f0f0f0;
             margin-top: 2rem;
+            width: 100%;
         }
         
         .testimonial-grid {
@@ -357,6 +373,7 @@
             gap: 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
         
         .testimonial {
@@ -618,6 +635,7 @@
             background: var(--dark);
             color: white;
             margin-top: 3rem;
+            width: 100%;
         }
         
         .copyright {
@@ -787,7 +805,7 @@
     </section>
 
     <!-- Ofertas -->
-    <section id="ofertas" style="padding: 2rem 4%; background: #f0f0f0;">
+    <section id="ofertas" style="padding: 2rem 4%; background: #f0f0f0; width: 100%;">
         <h2 class="section-title">Ofertas Especiales</h2>
         
         <div class="product-grid">
