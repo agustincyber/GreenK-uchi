@@ -212,7 +212,7 @@
                             class="author-avatar bg-[#00a86b] text-white rounded-full w-10 h-10 flex items-center justify-center">
                             JR</div>
                         <div class="author-info text-sm mt-2">
-                            <h4 class="font-bold">Juan Ramos</h4>
+                            <h4 class="font-bold">Lyz Taype</h4>
                             <p class="text-sm text-[#6b6b6b]">Cliente frecuente</p>
                         </div>
                     </div>
@@ -226,8 +226,8 @@
                             class="author-avatar bg-[#00a86b] text-white rounded-full w-10 h-10 flex items-center justify-center">
                             CR</div>
                         <div class="author-info text-sm mt-2">
-                            <h4 class="font-bold">Carlos Ramos</h4>
-                            <p class="text-sm text-[#6b6b6b]">Vegetariano</p>
+                            <h4 class="font-bold">Sofía Vivas</h4>
+                            <p class="text-sm text-[#6b6b6b]">Vegetariana</p>
                         </div>
                     </div>
                 </div>
@@ -240,7 +240,7 @@
                             class="author-avatar bg-[#00a86b] text-white rounded-full w-10 h-10 flex items-center justify-center">
                             AR</div>
                         <div class="author-info text-sm mt-2">
-                            <h4 class="font-bold">Ana Ramos</h4>
+                            <h4 class="font-bold">Ana Alarcón</h4>
                             <p class="text-sm text-[#6b6b6b]">Madre de familia</p>
                         </div>
                     </div>
@@ -394,6 +394,22 @@
         </div>
     </div>
 
+    <div class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden" id="success-modal">
+        <div class="bg-white rounded-xl shadow-2xl p-8 text-center w-full max-w-sm animate-fadeIn">
+            <!-- Check animado -->
+            <div class="mx-auto mb-4 flex items-center justify-center w-20 h-20 bg-green-100 rounded-full">
+                <svg class="w-10 h-10 text-green-600 animate-scaleIn" fill="none" stroke="currentColor" stroke-width="3"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">¡Pedido Realizado!</h2>
+            <p class="text-gray-600 mb-6">Tu pedido se ha registrado correctamente. Pronto nos comunicaremos contigo.
+            </p>
+            <button id="close-success"
+                class="px-5 py-2 rounded bg-[#112] text-white hover:bg-[#223] transition">Aceptar</button>
+        </div>
+    </div>
 
     <div class="modal hidden fixed inset-0 bg-black/50 z-50 items-center justify-center p-4" id="coupon-modal">
         <div class="dialog w-full max-w-md bg-white p-8 rounded-xl shadow-2xl text-center">
@@ -413,6 +429,64 @@
             <div class="form-actions flex justify-center mt-6">
                 <button class="btn btn-primary bg-[#00a86b] text-white px-3 py-1 rounded"
                     id="accept-coupon">¡Entendido!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Chat de Atención al Cliente -->
+    <div class="modal hidden fixed bottom-24 right-6 z-50" id="chat-modal">
+        <div
+            class="chat-bubble w-80 bg-white rounded-xl shadow-2xl max-h-[500px] flex flex-col border border-gray-200 relative">
+            <!-- Flecha que apunta al botón -->
+            <div
+                class="chat-arrow absolute -bottom-2 right-6 w-4 h-4 bg-white border-r border-b border-gray-200 transform rotate-45">
+            </div>
+
+            <!-- Header del Chat -->
+            <div class="chat-header bg-[#0084FF] text-white p-4 rounded-t-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                        <svg fill="currentColor" width="20" height="20" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.99121,1.00044a10.61443,10.61443,0,0,0-11,10.70019,10.46132,10.46132,0,0,0,3.41406,7.86524L4.457,21.2563a1.79959,1.79959,0,0,0,1.79883,1.74316,1.81992,1.81992,0,0,0,.72656-.15234l1.9209-.84668a11.89548,11.89548,0,0,0,3.08789.40039,10.61525,10.61525,0,0,0,11.001-10.7002A10.61525,10.61525,0,0,0,11.99121,1.00044Zm0,19.40039a9.86205,9.86205,0,0,1-2.63476-.35059,1.79856,1.79856,0,0,0-1.19629.0918l-1.71387.75586-.04492-1.49316a1.80968,1.80968,0,0,0-.60157-1.27442,8.4876,8.4876,0,0,1-2.80859-6.42969,8.65949,8.65949,0,0,1,9-8.70019,8.70522,8.70522,0,1,1,0,17.40039ZM15.72559,8.5854l-2.3125,2.75488L10.06641,9.28364a.99809.99809,0,0,0-1.28907.21L5.72559,13.13032a.99955.99955,0,1,0,1.53125,1.28516l2.498-2.97559,3.34668,2.05567a.99823.99823,0,0,0,1.28906-.209l2.86622-3.416A.99955.99955,0,1,0,15.72559,8.5854Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">SoyaDelight</h3>
+                        <p class="text-xs text-blue-100">En línea ahora</p>
+                    </div>
+                </div>
+                <button class="text-white hover:text-blue-200 text-2xl" id="close-chat-modal">&times;</button>
+            </div>
+
+            <!-- Área de Mensajes -->
+            <div class="chat-messages flex-1 p-4 overflow-y-auto bg-gray-50" id="chat-messages">
+                <div class="message bot-message mb-4 flex">
+                    <div
+                        class="w-8 h-8 bg-[#0084FF] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 flex-shrink-0">
+                        SD
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm max-w-xs">
+                        <p class="text-gray-800 text-sm">¡Hola! 👋 Bienvenido a SoyaDelight. ¿En qué puedo ayudarte hoy?
+                        </p>
+                        <span class="text-xs text-gray-500">Ahora</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área de Input -->
+            <div class="chat-input p-4 border-t border-gray-200">
+                <div class="flex gap-2">
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje..."
+                        class="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#0084FF]">
+                    <button id="send-message"
+                        class="bg-[#0084FF] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        <svg fill="currentColor" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -439,184 +513,287 @@
                 class="messenger-bubble absolute right-0 bottom-16 mb-2 w-max scale-0 group-hover:scale-100 transition-transform origin-bottom-right bg-[#0084FF] text-white py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
                 Envíanos un mensaje
             </div>
-            <a href="https://m.me/SoyaDelight"
-                class="messenger-button w-14 h-14 rounded-full flex items-center justify-center shadow-lg bg-[#0084FF] hover:scale-110 transition-transform"
-                target="_blank">
+            <button id="messenger-chat-btn"
+                class="messenger-button w-14 h-14 rounded-full flex items-center justify-center shadow-lg bg-[#0084FF] hover:scale-110 transition-transform cursor-pointer">
                 <svg fill="currentColor" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                     style="color: white;">
                     <path
                         d="M11.99121,1.00044a10.61443,10.61443,0,0,0-11,10.70019,10.46132,10.46132,0,0,0,3.41406,7.86524L4.457,21.2563a1.79959,1.79959,0,0,0,1.79883,1.74316,1.81992,1.81992,0,0,0,.72656-.15234l1.9209-.84668a11.89548,11.89548,0,0,0,3.08789.40039,10.61525,10.61525,0,0,0,11.001-10.7002A10.61525,10.61525,0,0,0,11.99121,1.00044Zm0,19.40039a9.86205,9.86205,0,0,1-2.63476-.35059,1.79856,1.79856,0,0,0-1.19629.0918l-1.71387.75586-.04492-1.49316a1.80968,1.80968,0,0,0-.60157-1.27442,8.4876,8.4876,0,0,1-2.80859-6.42969,8.65949,8.65949,0,0,1,9-8.70019,8.70522,8.70522,0,1,1,0,17.40039ZM15.72559,8.5854l-2.3125,2.75488L10.06641,9.28364a.99809.99809,0,0,0-1.28907.21L5.72559,13.13032a.99955.99955,0,1,0,1.53125,1.28516l2.498-2.97559,3.34668,2.05567a.99823.99823,0,0,0,1.28906-.209l2.86622-3.416A.99955.99955,0,1,0,15.72559,8.5854Z" />
                 </svg>
-            </a>
+            </button>
         </div>
     </div>
 
     <script>
-        const orderBtn = document.getElementById('order-btn');
-        const orderModal = document.getElementById('order-modal');
-        const closeModal = document.getElementById('close-modal');
-        const cancelOrder = document.getElementById('cancel-order');
-        const orderForm = document.getElementById('order-form');
-        const totalAmount = document.getElementById('total-amount');
-        const discountCode = document.getElementById('discount-code');
-        const halloweenBtn = document.getElementById('halloween-btn');
-        const couponModal = document.getElementById('coupon-modal');
-        const closeCouponModal = document.getElementById('close-coupon-modal');
-        const acceptCoupon = document.getElementById('accept-coupon');
 
-        let cart = { vegetales: 0, champiñones: 0, vegana: 0, picante: 0 };
-        const prices = { vegetales: 9.00, champiñones: 10.00, vegana: 11.00, picante: 10.00 };
-        let couponShown = false;
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderBtn = document.getElementById('order-btn');
+            const orderModal = document.getElementById('order-modal');
+            const closeModal = document.getElementById('close-modal');
+            const cancelOrder = document.getElementById('cancel-order');
+            const totalAmount = document.getElementById('total-amount');
+            const discountCode = document.getElementById('discount-code');
+            const halloweenBtn = document.getElementById('halloween-btn');
+            const couponModal = document.getElementById('coupon-modal');
+            const closeCouponModal = document.getElementById('close-coupon-modal');
+            const acceptCoupon = document.getElementById('accept-coupon');
+            const successModal = document.getElementById('success-modal');
+            const closeSuccess = document.getElementById('close-success');
+            const orderForm = document.getElementById('order-form');
+            const chatModal = document.getElementById('chat-modal');
+            const closeChatModal = document.getElementById('close-chat-modal');
+            const messengerChatBtn = document.getElementById('messenger-chat-btn');
+            const chatInput = document.getElementById('chat-input');
+            const sendMessageBtn = document.getElementById('send-message');
+            const chatMessages = document.getElementById('chat-messages');
 
-        const openModal = (modal) => {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        };
-
-        const closeModalFunc = (modal) => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        };
-
-        function updateTotal() {
-            let total = Object.keys(cart).reduce((sum, product) => sum + cart[product] * prices[product], 0);
-
-            let discount = 0;
-            const code = discountCode.value.toUpperCase();
-            if (code.includes('EMPRENDIMIENTO')) discount += 0.15;
-            if (code.includes('EMPRENDEDOR')) discount += 0.20;
-
-            if (discount > 0) {
-                total *= (1 - discount);
-            }
-
-            totalAmount.textContent = total.toFixed(2);
-        }
-
-        halloweenBtn.addEventListener('click', () => {
-            document.body.classList.toggle('halloween');
-            if (document.body.classList.contains('halloween') && !couponShown) {
-                openModal(couponModal);
-                couponShown = true;
-            }
-        });
-
-        closeCouponModal.addEventListener('click', () => closeModalFunc(couponModal));
-        acceptCoupon.addEventListener('click', () => closeModalFunc(couponModal));
-        couponModal.addEventListener('click', (e) => {
-            if (e.target === couponModal) closeModalFunc(couponModal);
-        });
-
-        orderBtn.addEventListener('click', () => openModal(orderModal));
-        closeModal.addEventListener('click', () => closeModalFunc(orderModal));
-        cancelOrder.addEventListener('click', () => closeModalFunc(orderModal));
-        orderModal.addEventListener('click', (e) => {
-            if (e.target === orderModal) closeModalFunc(orderModal);
-        });
-
-        document.querySelectorAll('.quantity-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const product = e.target.dataset.product;
-                const input = document.getElementById(`${product}-qty`);
-                let value = parseInt(input.value);
-
-                if (e.target.classList.contains('plus')) {
-                    value++;
-                } else if (e.target.classList.contains('minus') && value > 0) {
-                    value--;
-                }
-
-                input.value = value;
-                cart[product] = value;
-                updateTotal();
-            });
-        });
-
-        document.querySelectorAll('.quantity-input').forEach(input => {
-            input.addEventListener('input', (e) => {
-                const product = e.target.id.replace('-qty', '');
-                cart[product] = parseInt(e.target.value) || 0;
-                updateTotal();
-            });
-        });
-
-        discountCode.addEventListener('input', updateTotal);
-
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const productName = e.target.dataset.product;
-                let productKey;
-                if (productName.includes('Vegetales')) productKey = 'vegetales';
-                else if (productName.includes('Champiñones')) productKey = 'champiñones';
-                else if (productName.includes('Vegana')) productKey = 'vegana';
-                else if (productName.includes('Picante')) productKey = 'picante';
-
-                if (productKey) {
-                    const input = document.getElementById(`${productKey}-qty`);
-                    input.value = parseInt(input.value) + 1;
-                    cart[productKey] = parseInt(input.value);
-                    openModal(orderModal);
-                    updateTotal();
-                }
-            });
-        });
-
-        document.querySelectorAll('[data-offer]').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const offer = e.target.dataset.offer;
-
-                Object.keys(cart).forEach(p => { cart[p] = 0; });
-
-                if (offer === 'combo6') {
-                    cart = { vegetales: 2, champiñones: 2, vegana: 1, picante: 1 };
-                } else if (offer === 'combo12') {
-                    cart = { vegetales: 3, champiñones: 3, vegana: 3, picante: 3 };
-                }
-
-                Object.keys(cart).forEach(p => { document.getElementById(`${p}-qty`).value = cart[p]; });
-
-                openModal(orderModal);
-                updateTotal();
-            });
-        });
-
-        orderForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            if (Object.values(cart).reduce((a, b) => a + b, 0) === 0) {
-                alert('Por favor, selecciona al menos una empanada.');
+            if (!orderBtn || !orderModal || !closeModal || !cancelOrder || !totalAmount ||
+                !discountCode || !halloweenBtn || !couponModal || !closeCouponModal ||
+                !acceptCoupon || !successModal || !closeSuccess || !orderForm ||
+                !chatModal || !closeChatModal || !messengerChatBtn || !chatInput ||
+                !sendMessageBtn || !chatMessages) {
+                console.error('Algunos elementos del DOM no se encontraron');
                 return;
             }
 
-            let message = "¡Hola! Quiero hacer un pedido:\n\n";
-            Object.keys(cart).forEach(productKey => {
-                if (cart[productKey] > 0) {
-                    const name = document.querySelector(`[data-product="${productKey}"]`).closest('.product-item').querySelector('.product-name').textContent;
-                    message += `${cart[productKey]} x ${name} - S/ ${(cart[productKey] * prices[productKey]).toFixed(2)}\n`;
+            let cart = { vegetales: 0, champiñones: 0, vegana: 0, picante: 0 };
+            const prices = { vegetales: 9.00, champiñones: 10.00, vegana: 11.00, picante: 10.00 };
+            let couponShown = false;
+
+            const openModal = (modal) => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            };
+
+            const closeModalFunc = (modal) => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
+
+            function updateTotal() {
+                let total = Object.keys(cart).reduce((sum, product) => sum + cart[product] * prices[product], 0);
+
+                let discount = 0;
+                const code = discountCode.value.toUpperCase();
+                if (code.includes('EMPRENDIMIENTO')) discount += 0.15;
+                if (code.includes('EMPRENDEDOR')) discount += 0.20;
+
+                if (discount > 0) total *= (1 - discount);
+
+                totalAmount.textContent = total.toFixed(2);
+            }
+
+            halloweenBtn.addEventListener('click', () => {
+                document.body.classList.toggle('halloween');
+                if (document.body.classList.contains('halloween') && !couponShown) {
+                    openModal(couponModal);
+                    couponShown = true;
                 }
             });
 
-            message += `\n*Total: S/ ${totalAmount.textContent}*\n`;
+            closeCouponModal.addEventListener('click', () => closeModalFunc(couponModal));
+            acceptCoupon.addEventListener('click', () => closeModalFunc(couponModal));
+            couponModal.addEventListener('click', (e) => {
+                if (e.target === couponModal) closeModalFunc(couponModal);
+            });
 
-            if (discountCode.value) {
-                message += `(Código de descuento usado: ${discountCode.value})\n`;
+            orderBtn.addEventListener('click', () => openModal(orderModal));
+            closeModal.addEventListener('click', () => closeModalFunc(orderModal));
+            cancelOrder.addEventListener('click', () => closeModalFunc(orderModal));
+            orderModal.addEventListener('click', (e) => {
+                if (e.target === orderModal) closeModalFunc(orderModal);
+            });
+
+            const addToCartBtns = document.querySelectorAll('.add-to-cart');
+            if (addToCartBtns.length > 0) {
+                addToCartBtns.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const productName = button.dataset.product;
+                        const productPrice = parseFloat(button.dataset.price);
+
+                        const productKey = getProductKey(productName);
+
+                        cart[productKey] = (cart[productKey] || 0) + 1;
+
+                        const input = document.getElementById(`${productKey}-qty`);
+                        if (input) {
+                            input.value = cart[productKey];
+                        }
+
+                        updateTotal();
+                        openModal(orderModal);
+                    });
+                });
             }
 
-            message += `\n*Datos de entrega:*\n`;
-            message += `Nombre: ${document.getElementById('name').value}\n`;
-            message += `Teléfono: ${document.getElementById('phone').value}\n`;
-            message += `Dirección: ${document.getElementById('address').value}\n`;
+            function getProductKey(productName) {
+                if (productName.includes('Vegetales')) return 'vegetales';
+                if (productName.includes('Champiñones')) return 'champiñones';
+                if (productName.includes('Vegana')) return 'vegana';
+                if (productName.includes('Picante')) return 'picante';
+                return 'vegetales'; // fallback
+            }
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappURL = `https://wa.me/51933750473?text=${encodedMessage}`;
+            const offerBtns = document.querySelectorAll('[data-offer]');
+            if (offerBtns.length > 0) {
+                offerBtns.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const offer = button.dataset.offer;
 
-            window.open(whatsappURL, '_blank');
-            closeModalFunc(orderModal);
-            orderForm.reset();
-            Object.keys(cart).forEach(p => { cart[p] = 0; document.getElementById(`${p}-qty`).value = 0; });
-            updateTotal();
+                        if (offer === 'combo6') {
+                            cart.vegetales = (cart.vegetales || 0) + 2;
+                            cart.champiñones = (cart.champiñones || 0) + 2;
+                            cart.vegana = (cart.vegana || 0) + 1;
+                            cart.picante = (cart.picante || 0) + 1;
+                        } else if (offer === 'combo12') {
+                            cart.vegetales = (cart.vegetales || 0) + 3;
+                            cart.champiñones = (cart.champiñones || 0) + 3;
+                            cart.vegana = (cart.vegana || 0) + 3;
+                            cart.picante = (cart.picante || 0) + 3;
+                        }
+
+                        Object.keys(cart).forEach(key => {
+                            const input = document.getElementById(`${key}-qty`);
+                            if (input) {
+                                input.value = cart[key];
+                            }
+                        });
+
+                        updateTotal();
+                        openModal(orderModal);
+                    });
+                });
+            }
+
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+            if (quantityBtns.length > 0) {
+                quantityBtns.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const product = e.target.dataset.product;
+                        const input = document.getElementById(`${product}-qty`);
+                        if (!input) return;
+
+                        let value = parseInt(input.value);
+
+                        if (e.target.classList.contains('plus')) value++;
+                        else if (e.target.classList.contains('minus') && value > 0) value--;
+
+                        input.value = value;
+                        cart[product] = value;
+                        updateTotal();
+                    });
+                });
+            }
+
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            if (quantityInputs.length > 0) {
+                quantityInputs.forEach(input => {
+                    input.addEventListener('input', (e) => {
+                        const product = e.target.id.replace('-qty', '');
+                        cart[product] = parseInt(e.target.value) || 0;
+                        updateTotal();
+                    });
+                });
+            }
+
+            if (discountCode) {
+                discountCode.addEventListener('input', updateTotal);
+            }
+
+            orderForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const total = parseFloat(totalAmount.textContent);
+                if (total === 0) {
+                    alert('Por favor, selecciona al menos una empanada.');
+                    return;
+                }
+
+                closeModalFunc(orderModal);
+                openModal(successModal);
+
+                orderForm.reset();
+                Object.keys(cart).forEach(p => { cart[p] = 0; document.getElementById(`${p}-qty`).value = 0; });
+                updateTotal();
+            });
+
+            closeSuccess.addEventListener('click', () => closeModalFunc(successModal));
+            successModal.addEventListener('click', (e) => {
+                if (e.target === successModal) closeModalFunc(successModal);
+            });
+
+            const chatResponses = [
+                "¡Perfecto! ¿Te interesa alguno de nuestros sabores en particular?",
+                "¡Excelente elección! Nuestras empanadas están hechas con ingredientes frescos y de calidad.",
+                "¿Te gustaría conocer más sobre nuestros combos familiares? Tenemos ofertas especiales.",
+                "¡Genial! ¿Necesitas información sobre el envío o tienes alguna pregunta sobre los ingredientes?",
+                "¡Por supuesto! ¿Te gustaría que te ayude con algo más específico?",
+                "¡Perfecto! ¿Quieres que te explique sobre nuestros códigos de descuento disponibles?",
+                "¡Excelente! ¿Te interesa saber más sobre nuestros horarios de entrega?",
+                "¡Claro! ¿Hay algo más en lo que pueda ayudarte hoy?",
+                "¡Por supuesto! ¿Te gustaría conocer nuestros testimonios de clientes satisfechos?",
+                "¡Perfecto! ¿Necesitas ayuda con tu pedido o tienes alguna pregunta específica?"
+            ];
+
+            let currentResponseIndex = 0;
+
+            messengerChatBtn.addEventListener('click', () => {
+                openModal(chatModal);
+            });
+
+            closeChatModal.addEventListener('click', () => closeModalFunc(chatModal));
+
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+
+                addUserMessage(message);
+                chatInput.value = '';
+
+                setTimeout(() => {
+                    addBotMessage(chatResponses[currentResponseIndex]);
+                    currentResponseIndex = (currentResponseIndex + 1) % chatResponses.length;
+                }, 1000 + Math.random() * 2000);
+            }
+
+            function addUserMessage(message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user-message mb-4 flex justify-end';
+                messageDiv.innerHTML = `
+                    <div class="bg-[#0084FF] text-white rounded-lg p-3 shadow-sm max-w-xs">
+                        <p class="text-sm">${message}</p>
+                        <span class="text-xs text-blue-100">Ahora</span>
+                    </div>
+                `;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function addBotMessage(message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message bot-message mb-4 flex';
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-[#0084FF] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 flex-shrink-0">
+                        SD
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow-sm max-w-xs">
+                        <p class="text-gray-800 text-sm">${message}</p>
+                        <span class="text-xs text-gray-500">Ahora</span>
+                    </div>
+                `;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            sendMessageBtn.addEventListener('click', sendMessage);
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
         });
     </script>
+
 </body>
 
 </html>
